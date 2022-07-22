@@ -1,7 +1,10 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ 
+ ## Link to project
  <a href="https://task-manger-with-redux.vercel.app/">link to live project</a>
+ 
 ## Available Scripts
 
 In the project directory, you can run:

@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import AddComponent from './componnents/AddComponent';
+import Form from './componnents/Form';
+import Task from './componnents/Task';
+import Style from './Style/Style.module.css'
+import {useSelector} from 'react-redux'
+import GetUserInfo from './componnents/GetUserInfo';
 
 function App() {
+  const isopen = useSelector((state) => state.isopen.value)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <div className={Style.card}>
+    <AddComponent/>
+   {isopen && <Form/>}
+   <GetUserInfo/>
+  {!isopen && <Task/>} 
+   </div>
+   </>
   );
 }
 

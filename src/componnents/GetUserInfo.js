@@ -1,9 +1,10 @@
 import React,{useEffect} from 'react'
 import axios from 'axios'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { SetUser } from '../Redux/UserInfo'
 
 const GetUserInfo = () => {
+
     const setuser = useDispatch()
     // get all users
     useEffect(()=>{

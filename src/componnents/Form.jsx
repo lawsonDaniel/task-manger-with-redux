@@ -24,7 +24,6 @@ const Form = () => {
         const [hours,minutes] = hm.split(':');
         const totalSeconds = (hours) * 60 * 60 + (minutes) * 60 ;
         console.log(totalSeconds);
-        // form data
         const data = {
                 assigned_user: "user_4ee4cf67ad474a27988bc0afb84cf472", 
                 task_date:formdetails.date ,
@@ -42,7 +41,7 @@ const Form = () => {
         })
         .then(response => {
            console.log(response)
-           Updateform(toggle())
+            Updateform(toggle())
         })
         .catch((error) => {
            console.log(error)

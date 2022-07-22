@@ -4,7 +4,8 @@ import { useDispatch,useSelector } from 'react-redux'
 import { SetUser } from '../Redux/UserInfo'
 
 const GetUserInfo = () => {
-
+    const user = useSelector((state) => state.userinfo.value)
+    console.log(user)
     const setuser = useDispatch()
     // get all users
     useEffect(()=>{
@@ -13,7 +14,7 @@ const GetUserInfo = () => {
         .then(res => {
              setuser(SetUser(res.data.results) )  
         })
-        },[setuser])
+        },[setuser, user])
         
 }
 
